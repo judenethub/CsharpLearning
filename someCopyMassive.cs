@@ -11,7 +11,10 @@ namespace Loop
             int[] array2 = new int[count];
             for (int i = 0; i < count; i++)
             {
-                array2[i] = array[index]; index++;
+
+                
+                if (index < array.Length) {array2[i] = array[index];  index++; } 
+                else { array2[i] = 1;  }
             }
             return array2;
         }
@@ -20,8 +23,8 @@ namespace Loop
 
         static void Main()
         {
-            int[] array = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
-            int[] array2 = SubArray(array, 3, 4);
+            int[] array = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 4 };
+            int[] array2 = SubArray(array, 5, 14);
 
             for (int i = 0; i < array2.Length; i++)
             {
